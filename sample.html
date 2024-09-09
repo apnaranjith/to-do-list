@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ranji">
+
+    </div>
+    <script>
+        var main=document.getElementById("ranji");
+        var dv=document.createElement("div");
+        dv.style.width="200px";
+        dv.style.height="200px";
+        dv.style.backgroundColor="red";
+        var btn=document.createElement("button");
+        btn.innerText="edit";
+      
+        var i_cre=document.createElement("input");
+        g=i_cre.innerText;
+        dv.append(btn,i_cre);
+        btn.addEventListener("click",function (){
+            var prompt1=prompt("enter the value");
+            i_cre.innerText=prompt1;
+            
+
+        })
+
+         main.append(dv);
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding:0;
+        margin:0;
+        overflow:hidden;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+    <div id="main">
+
+    </div>
+    <script>
+        var dvmain_get=document.getElementById("main");
+        dvmain_get.style.backgroundColor="red";
+        dvmain_get.style.height="100vh";
+        dvmain_get.style.width="100vw";
+        var dv1_cre=document.createElement("div");
+        dv1_cre.style.backgroundColor="black";
+        dv1_cre.style.height="200px";
+        dv1_cre.style.width="500px";
+        dv1_cre.style.position="relative";
+        dv1_cre.style.left="380px";
+        dv1_cre.style.top="30px";
+        dv1_cre.innerHTML="<h1><i>TO DO LIST:</i></h1>";
+        dv1_cre.style.paddingLeft="250px";
+         dv1_cre.style.color="white";
+        dv2_cre=document.createElement("div");
+        dv2_cre.style.display="flex";
+        
+        inp1_cre=document.createElement("input");
+        
+         var btn1_cre=document.createElement("button");
+         btn1_cre.innerText="Click me";
+       
+         dv2_cre.append(inp1_cre,btn1_cre)
+         
+         btn1_cre.addEventListener("click",function (e){
+            e.preventDefault();
+            var gt_val=inp1_cre.value;
+            var edit_btn=document.createElement("button");
+            edit_btn.innerText="Edit";
+
+            var delte_btn=document.createElement("button");
+            delte_btn.innerText="delete";
+            dv3_cre=document.createElement("div");
+            dv3_cre.style.display="flex";
+         dv3_cre.style.width="500px";
+         dv3_cre.style.position="relative";
+        dv3_cre.style.left="380px";
+        dv3_cre.style.top="80px";
+        dv3_cre.style.backgroundColor="white";
+        dv3_cre.append(gt_val,edit_btn,delte_btn);
+        edit_btn.addEventListener("click",function (){
+            
+            var pmpt=prompt("enter the task to update:"); 
+           
+           gt_val=pmpt;
+           
+          
+
+       })
+       delte_btn.addEventListener("click",function (){
+        dv3_cre.remove();
+       })
+       
+        dvmain_get.append(dv3_cre);
+        
+           
+
+
+
+           
+            
+        })
+         dv1_cre.append(dv2_cre)
+        dvmain_get.append(dv1_cre);
+
+
+    </script>
+</body>
+</html>
